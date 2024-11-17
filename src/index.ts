@@ -26,7 +26,6 @@ const startServer = async () => {
   // Register the proxy plugin
   app.register(proxy, {
     upstream: TARGET, // Replace with your HTTP server's IP and port http://<your-http-server-ip>:<port>
-    rewritePrefix: "/", // Rewrite the incoming URL prefix (optional)
   });
 
   // Use public directory to serve static files from root folder
