@@ -29,7 +29,7 @@ const startServer = async () => {
   });
 
   // Use public directory to serve static files
-  app.register(require("fastify-static"), {
+  app.register(require("@fastify-static"), {
     root: path.join(__dirname, "public"),
   });
 
