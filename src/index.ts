@@ -29,9 +29,9 @@ const startServer = async () => {
     rewritePrefix: "/", // Rewrite the incoming URL prefix (optional)
   });
 
-  // Use public directory to serve static files
+  // Use public directory to serve static files from root folder
   app.register(staticFolder, {
-    root: path.join(__dirname, "public"),
+    root: path.join(__dirname, "../public"),
   });
 
   // Start the server
