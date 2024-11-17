@@ -1,5 +1,6 @@
 import fastify from "fastify";
 import proxy from "@fastify/http-proxy";
+import staticFolder from "@fastify/static";
 import fs from "fs";
 import dotenv from "dotenv";
 import path from "path";
@@ -29,7 +30,7 @@ const startServer = async () => {
   });
 
   // Use public directory to serve static files
-  app.register(require("@fastify-static"), {
+  app.register(staticFolder, {
     root: path.join(__dirname, "public"),
   });
 
